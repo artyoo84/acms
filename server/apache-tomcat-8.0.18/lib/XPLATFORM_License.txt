@@ -1,0 +1,25 @@
+※ 본 라이센스는 개발용 라이센스로 2015년 4월 1일 부터 2개월 동안만 사용가능합니다.
+	
+	1. License
+		A. Server (X-API) : XPLATFORM_Server_License.xml (첨부파일)
+		B. Client (Runtime) : XPLATFORM_Client_License.xml (첨부파일)
+														(*XPLATFORM_Client_License_201012.xml
+		   												- 2010년 12월 이전 버전 엔진 사용시 적용 본 라이센스를 사용하시기 바랍니다.)
+		C. Tool (UX-Studio) : Y7RCU-2A66G-SYU78-J8MA8-BDT6P-FM8Y1-HTX
+	2. License 정보
+		A. Customer : TOBESOFT
+		B. Clienst O/S : Windows,Windows CE,Linux
+		C. License : RunTime Version, Widget Version, Ajax Version
+		D. License 사용기간 : 2015/4/1 ~ 2015/5/31
+
+	3. XPLATFORM License 적용 안내
+		A. Server License
+			제공 되는 XPLATFORM Server License파일명은 “XPLATFORM_Server_License.xml”입니다.
+			License 파일명을 변경하시면 안됩니다.
+			XPLATFORM Server License 파일은 클래스경로에 포함시키면 되며,
+			일반적으로 Web Application의 /WEB-INF/classes 폴더에 위치시키면 됩니다.
+		B. Client License
+			제공 되는 XPLATFORM Client License파일을 웹 서버에 올리시면 됩니다.
+			XPLATFORM ADL의 licenseurl에 XPLATFORM Client License 파일의 URL을 입력하면 됩니다.
+		C. Tool License
+			UX-Studio의 about에 Enter new License에 Customer name 과 Product Key를 입력하면 됩니다.
