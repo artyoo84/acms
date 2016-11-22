@@ -19,10 +19,10 @@ var Login = function () {
 
 	            messages: {
 	                username: {
-	                    required: "Username is required."
+	                    required: "아이디를 입력해주세요."
 	                },
 	                password: {
-	                    required: "Password is required."
+	                    required: "비밀번호를 입력해주세요."
 	                }
 	            },
 

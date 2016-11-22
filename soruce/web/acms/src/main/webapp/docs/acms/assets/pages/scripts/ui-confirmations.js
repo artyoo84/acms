@@ -32,6 +32,7 @@ var UIConfirmations = function () {
 
 }();
 
-jQuery(document).ready(function() {    
+jQuery(document).ready(function() {
+	$('[data-toggle=confirmation]').confirmation({ btnOkClass: 'btn btn-sm btn-success', btnCancelClass: 'btn btn-sm btn-danger'});
    UIConfirmations.init();
 });

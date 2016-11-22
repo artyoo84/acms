@@ -1218,7 +1218,7 @@ Page footer
 .page-footer {
   padding: 10px 20px 15px 20px;
   font-size: 13px;
-  height: 33px; }
+  height: 60px; /* default 30px;*/ }
   .page-footer:before, .page-footer:after {
     content: " ";
     display: table; }

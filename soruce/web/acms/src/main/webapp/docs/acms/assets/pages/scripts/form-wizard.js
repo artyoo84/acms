@@ -13,102 +13,91 @@ var FormWizard = function () {
                 return "<img class='flag' src='../../assets/global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
             }
 
-            $("#country_list").select2({
-                placeholder: "Select",
-                allowClear: true,
-                formatResult: format,
-                width: 'auto', 
-                formatSelection: format,
-                escapeMarkup: function (m) {
-                    return m;
-                }
-            });
-
             var form = $('#submit_form');
             var error = $('.alert-danger', form);
             var success = $('.alert-success', form);
 
             form.validate({
+            	
+                onclick: false,
                 doNotHideMessage: true, //this option enables to show the error/success messages on tab switch.
                 errorElement: 'span', //default input error message container
                 errorClass: 'help-block help-block-error', // default input error message class
                 focusInvalid: false, // do not focus the last invalid input
                 rules: {
                     //account
-                    username: {
-                        minlength: 5,
-                        required: true
-                    },
-                    password: {
-                        minlength: 5,
-                        required: true
-                    },
-                    rpassword: {
-                        minlength: 5,
+                	bzno1: {
                         required: true,
-                        equalTo: "#submit_form_password"
+                        minlength : 3,
+                        maxlength : 3,
+                        number: true
                     },
-                    //profile
-                    fullname: {
+                    bzno2: {
+                    	required: true,
+                        minlength : 2,
+                        maxlength : 2,
+                        number: true
+                    },
+                    bzno3: {
+                    	required: true,
+                        minlength : 5,
+                        maxlength : 5,
+                        number: true
+                    },
+                    schl_nm: {
+                        maxlength: 40,
                         required: true
                     },
-                    email: {
-                        required: true,
-                        email: true
+                    schlrnm: {
+                    	maxlength: 40,
+                    	required: true
                     },
-                    phone: {
-                        required: true
+                    schl_cfc: {
+                    	maxlength: 1,
+                    	required: true
                     },
-                    gender: {
-                        required: true
+                    schl_rep_email: {
+                    	maxlength: 100,
+                    	required: true,
+                    	email : true
                     },
-                    address: {
-                        required: true
+                    rep_telno: {
+                    	maxlength: 12,
+                    	required: true
                     },
-                    city: {
-                        required: true
+                    rep_faxno: {
+                    	maxlength: 12,
+                    	required: true
                     },
-                    country: {
-                        required: true
+                    hompag_adr: {
+                    	maxlength: 100,
+                    	required: true
                     },
-                    //payment
-                    card_name: {
-                        required: true
+                    ac_no: {
+                    	maxlength: 20,
+                    	required: true
                     },
-                    card_number: {
-                        minlength: 16,
-                        maxlength: 16,
-                        required: true
+                    drpnm: {
+                    	maxlength: 20,
+                    	required: true
                     },
-                    card_cvc: {
-                        digits: true,
-                        required: true,
-                        minlength: 3,
-                        maxlength: 4
+                    motto_cntn: { 
+                    	maxlength: 400,
+                    	required: true
                     },
-                    card_expiry_date: {
-                        required: true
-                    },
-                    'payment[]': {
-                        required: true,
-                        minlength: 1
+                    etb_dt : {
+                    	required : true,
+                    	
                     }
+
+
                 },
 
-                messages: { // custom messages for radio buttons and checkboxes
-                    'payment[]': {
-                        required: "Please select at least one option",
-                        minlength: jQuery.validator.format("Please select at least one option")
-                    }
-                },
-
-                errorPlacement: function (error, element) { // render error placement for each input type
-                    if (element.attr("name") == "gender") { // for uniform radio buttons, insert the after the given container
-                        error.insertAfter("#form_gender_error");
-                    } else if (element.attr("name") == "payment[]") { // for uniform checkboxes, insert the after the given container
-                        error.insertAfter("#form_payment_error");
+                errorPlacement: function (error, element) { 
+                    if (element.attr("name") == "bzno1" || element.attr("name") == "bzno2" || element.attr("name") == "bzno3") { // for uniform radio buttons, insert the after the given container
+                    	$("#bznoErrorBlock").html(error);
                     } else {
-                        error.insertAfter(element); // for other inputs, just perform default behavior
+                    	element.parent().find(".help-block").html(error);
                     }
                 },
 
@@ -246,16 +235,33 @@ var FormWizard = function () {
                 alert('Finished! Hope you like it :)');
             }).hide();
 
-            //apply validation on select2 dropdown value change, this only needed for chosen dropdown integration.
-            $('#country_list', form).change(function () {
-                form.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
-            });
         }
-
+    
     };
 
 }();
 
+var ComponentsDateTimePickers = function (){
+	var handleDatePickers = function () {
+		 $('.date-picker').datepicker({
+			 rtl: App.isRTL(),
+			 orientation: "left",
+			 autoclose: true,
+			 language: "ko"
+		 });    	
+		 $(".date-reset").click(function (){
+			 $(this).parent().parent().find("input").val("");			 
+		 });
+	}
+	return {
+		 init: function () {
+			 handleDatePickers();
+		 }
+	}
+}();
+
+
 jQuery(document).ready(function() {
     FormWizard.init();
+    ComponentsDateTimePickers.init();
 });

@@ -3,7 +3,7 @@
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Metronic | Admin Dashboard Template</title>
+<title>학원관리시스템</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="" name="description"/>
@@ -20,15 +20,25 @@
 <link href="../assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
 <link href="../assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
 <link href="../assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
+<link href="../assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/global/plugins/jcrop/css/jquery.Jcrop.min.css" rel="stylesheet" type="text/css" />
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN THEME GLOBAL STYLES -->
-<link href="../assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
-<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/global/css/components.css" rel="stylesheet" id="style_components" type="text/css" />
+<link href="../assets/global/css/plugins.css" rel="stylesheet" type="text/css" />
 <!-- END THEME GLOBAL STYLES -->
+
 <!-- BEGIN THEME LAYOUT STYLES -->
-<link href="../assets/layouts/layout4/css/layout.min.css" rel="stylesheet" type="text/css" />
-<link href="../assets/layouts/layout4/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
-<link href="../assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/layouts/layout4/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="../assets/layouts/layout4/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color" />
+<link href="../assets/layouts/layout4/css/custom.css" rel="stylesheet" type="text/css" />
+<!-- main css -->
+<link href="../css/main.css?ver=0.1.1.1" rel="stylesheet" type="text/css" />
+
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
 </head>

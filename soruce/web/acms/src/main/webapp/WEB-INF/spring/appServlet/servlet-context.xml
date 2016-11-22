@@ -41,6 +41,9 @@
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 	
 	<mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <beans:bean class="kr.co.doollee.common.resolver.CustomMapArgumentResolver"></beans:bean>       
+        </mvc:argument-resolvers>
 	    <mvc:message-converters>
 	        <beans:bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
 	        <beans:bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>

@@ -1093,11 +1093,13 @@ a.dt-button {
 
 .dataTables_wrapper .dt-buttons {
   float: right; }
+  
+  /*
   .portlet.light .dataTables_wrapper .dt-buttons {
     margin-top: -64px; }
   .portlet.box .dataTables_wrapper .dt-buttons {
     margin-top: -50px; }
-
+*/
 /***
 Rot Details
 ***/

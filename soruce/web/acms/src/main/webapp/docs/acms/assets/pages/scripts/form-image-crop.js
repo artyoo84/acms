@@ -505,8 +505,8 @@ var FormImageCrop = function () {
                 return;
             }
 
-            App.addResizeHandler(handleResponsive);
-            handleResponsive();
+//            App.addResizeHandler(handleResponsive);
+//            handleResponsive();
 
             demo1();
             demo2();
